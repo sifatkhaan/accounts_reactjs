@@ -2,6 +2,7 @@ import React, {useState, useEffect } from 'react'
 import Menu from '../Menu'
 import axios from 'axios';
 import dayjs from 'dayjs'
+import { Link } from 'react-router-dom';
 export default function Home() {
 
   const [parchase, setParchase] = useState([]);
@@ -26,6 +27,9 @@ export default function Home() {
     <>
     <div className='container text-center'>
     <Menu />
+    <div>
+      <Link className='btn btn-sm btn-success' to={'/itemadd'}>Add New</Link>
+    </div>
         <div>
           <table className='table table-bordered col-md-8'>
             <tr>
